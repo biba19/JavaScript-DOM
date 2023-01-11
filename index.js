@@ -6,20 +6,22 @@ var classeName = document.getElementsByClassName("text-red");
 console.log(classeName);
 var byId = document.getElementById("#sous-titre-DOM");
 console.log(byId);
-var element = document.getElementById("#event-listener");
+var element = document.getElementById("event-listener");
+
 if (element) {
   element.addEventListener("mouseover", function () {
-    alert("mouseover!");
+    //alert("mouseover!");
   });
 
   element.addEventListener("mousout", function () {
-    alert("mouseout!");
+    //alert("mouseout!");
   });
 
   element.onmousemove = function (event) {
     console.log("Evènement :", event);
     console.log("the x is=" + event.x + "the y is=" + event.y);
-    console.log("HERE" + window.innerWidth);
+    const postion = window.innerWidth / 2 > event.x ? "GAUCHE" : "DROITE";
+    console.log("la position est en ", postion);
   };
 
   element.onmouseout = function (event) {
@@ -27,3 +29,4 @@ if (element) {
     console.log("the x is=" + event.x + "the y is=" + event.y);
   };
 }
+console.log("HERE" + window.innerWidth);
