@@ -1,0 +1,27 @@
+@font-face {
+  font-family: luciole;
+  src: url(./fonts/Luciole-Regular.ttf);
+}
+
+* {
+  font-family: luciole;
+  color: #404040;
+  background-color: #FDFDFD;
+}
+
+.text-red {
+  color: red;
+}
+
+p {
+  max-width: 960px;
+  text-align: justify;
+}
+
+a {
+  color: crimson;
+}
+
+#event-listener {
+  max-width: max-content;
+}
