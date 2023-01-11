@@ -20,8 +20,13 @@ if (element) {
   element.onmousemove = function (event) {
     console.log("Evènement :", event);
     console.log("the x is=" + event.x + "the y is=" + event.y);
-    const postion = window.innerWidth / 2 > event.x ? "GAUCHE" : "DROITE";
-    console.log("la position est en ", postion);
+    const position = window.innerWidth / 2 > event.x ? "GAUCHE" : "DROITE";
+    if (position === "GAUCHE") {
+      element.classList.remove("text-red");
+    } else {
+      element.classList.add("text-red");
+    }
+    console.log("la position est en ", position);
   };
 
   element.onmouseout = function (event) {
