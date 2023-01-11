@@ -4,7 +4,7 @@ var tagName = document.getElementsByTagName("h2");
 console.log(tagName);
 var classeName = document.getElementsByClassName("text-red");
 console.log(classeName);
-var byId = document.getElementById("#sous-titre-DOM");
+var byId = document.getElementById("sous-titre-DOM");
 console.log(byId);
 var element = document.getElementById("event-listener");
 
@@ -35,3 +35,13 @@ if (element) {
   };
 }
 console.log("HERE" + window.innerWidth);
+if (byId) {
+  byId.addEventListener("click", function () {});
+
+  byId.onclick = function (event2) {
+    console.log("wohoooo" + event2);
+    let p = document.createElement("p");
+    document.body.appendChild(p);
+    p.innerHTML = "new parag";
+  };
+}
